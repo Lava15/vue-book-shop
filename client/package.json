@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/vue": "latest",
+    "@heroicons/vue": "^2.1.1",
     "flowbite": "^2.2.1",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"

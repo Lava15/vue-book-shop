@@ -2,7 +2,7 @@
 
 import Input from "@/components/Input.vue";
 import Select from "@/components/Select.vue";
-import { data as items } from "../data.js"
+import {items}  from "../data.js"
 import Checkbox from "@/components/Checkbox.vue";
 
 function submitForm() {
@@ -66,13 +66,13 @@ function submitForm() {
 
           <div>
             <div class="mt-2">
-              <Select label="Favourite Color" name="color" items="items"/>
+              <Select label="Favourite Color" name="color" :items="items"/>
             </div>
           </div>
 
           <div>
             <div class="mt-2">
-              <Checkbox label="Favourite Color" name="color" items="items"/>
+              <Checkbox label="Favourite Color" name="color" items="data"/>
             </div>
           </div>
 
