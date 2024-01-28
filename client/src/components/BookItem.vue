@@ -1,9 +1,14 @@
 <script setup>
 import {TrashIcon} from "@heroicons/vue/24/solid/index.js";
 
-defineProps({
+const props = defineProps({
   book: Object
-})
+});
+const emits = defineEmits(['removeBook'])
+
+function triggerRemove() {
+  emits('removeBook', props.book.id)
+}
 </script>
 
 <template>
@@ -21,9 +26,9 @@ defineProps({
         {{ book.authors[0].name }}
       </p>
     </div>
-    <a href="" class="p-10 self-end" @click="$emit('removeBook', book.id)">
-      <TrashIcon class="h-6 w-6 text-red-500 hover:text-red-700"  />
-    </a>
+    <button class="p-10 self-end" @click="triggerRemove">
+      <TrashIcon class="h-6 w-6 text-red-500 hover:text-red-700"/>
+    </button>
   </li>
 
 </template>
