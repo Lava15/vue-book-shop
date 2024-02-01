@@ -4,7 +4,11 @@ import Input from "@/components/Input.vue";
 import Select from "@/components/Select.vue";
 import {items}  from "../data.js"
 import Checkbox from "@/components/Checkbox.vue";
+import {reactive} from "vue";
 
+const formData = reactive({
+
+})
 function submitForm() {
   console.log('Submit')
 }
